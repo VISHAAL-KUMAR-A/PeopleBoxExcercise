@@ -1,10 +1,10 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from .views import JobRecommendationViewSet, UserProfileViewSet
+from .views import UserProfileViewSet, JobViewSet
 
 router = DefaultRouter()
-router.register(r'jobs', JobRecommendationViewSet)
-router.register(r'profiles', UserProfileViewSet)
+router.register(r'users', UserProfileViewSet)
+router.register(r'jobs', JobViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
